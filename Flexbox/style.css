@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(236, 233, 233);
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    background: rgb(239, 239, 233);
+}
+
+.child{
+    display: flex;
+    list-style-type: none;
+    gap: 16px;
+    padding: 8px;
+
+}
+
+.child li{
+    align-self: center;
+    color: purple;
+}
+
+#logo{
+    font-style: italic;
+    font-weight: bold;
+}
+
+#notification{
+    color: white;
+    width: 150px;
+    background: purple;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.signup{
+    width: 50px;
+    height: 50px;
+    background: purple;
+    border-radius: 30px;
+}
+
+h1{
+    text-align: center;
+    margin: 32px 0;
+}
+
+.information{
+    display: flex;
+    justify-content: center;
+    gap: 52px;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 200px;
+}
+
+div img{
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+.warning-container{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.information div p{
+    text-align: center;
+}
+
+.warning{
+    margin-top: 20px;
+    display: flex;
+    width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    justify-content: space-around;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    flex: 1;
+
+}
