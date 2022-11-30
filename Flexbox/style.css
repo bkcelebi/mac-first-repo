@@ -67,32 +67,91 @@ div img{
     margin-bottom: 5px;
 }
 
-.warning-container{
-    width: 100%;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .information div p{
     text-align: center;
 }
 
 .warning{
-    margin-top: 20px;
+    height: 400px;
+    width: 100%;
     display: flex;
-    width: 400px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.warning-box{
     background: #fff;
-    border-radius: 10px;
+    display: flex;
     justify-content: space-around;
+
+    padding: 16px;
+    border-radius: 10px;
+    width: 600px;
+    height: auto;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.exclamation{
+    width: 50px;
+    height: 50px;
+    background: rgb(179, 179, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
 }
 
 .main{
     display: flex;
-    flex-wrap: wrap;
-    width: 300px;
-    flex: 1;
+    flex-direction: column;
+    gap: 16px;
+    width: 500px;
+    height: 200px;
+    
+}
 
+.main .warning-main-body{
+    display: flex;
+}
+
+.warning-main-header{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.warning-main-header div{
+    background: rgb(202, 198, 198);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.warning-decision-boxes{
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+   
+}
+
+
+.continue, 
+.cancel{
+    border: 1px black solid;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+}
+
+.continue{
+    background: rgb(82, 82, 243);
+    color: #fff;
 }
