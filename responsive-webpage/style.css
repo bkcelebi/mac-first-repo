@@ -62,6 +62,7 @@ body{
     height: 72px;
     background: #ccc;
     color: purple;
+    flex: 0 0 auto;
 }
 
 .sidebar ul li{
