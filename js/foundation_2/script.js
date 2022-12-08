@@ -60,19 +60,45 @@ document.getElementById("substr").innerHTML = twoLine.substr(2, 4);
 // check the login
 
 
-let user = prompt("Who are you?");
+// let user = prompt("Who are you?");
 
-if (user === "Admin"){
-    let userPw = prompt("What is the password");
-    if (userPw === "TheMaster"){
-        alert("Welcome!");
-    }else if(userPw === null || userPw === ""){
-        alert("Canceled");
-    }else{ 
-        alert("Wrong Password");
+// if (user === "Admin"){
+//     let userPw = prompt("What is the password");
+//     if (userPw === "TheMaster"){
+//         alert("Welcome!");
+//     }else if(userPw === null || userPw === ""){
+//         alert("Canceled");
+//     }else{ 
+//         alert("Wrong Password");
+//     };
+// } else if(user === null || user === ""){
+//     alert("Canceled");
+// } else{
+//     alert("I don't know you");
+// };
+
+
+
+// allowance updater
+
+let checkbox = document.querySelector("input");
+let reward = document.getElementById("reward");
+let shoppingIsDone = false;
+
+checkbox.addEventListener("change", () =>{
+    checkbox.disabled = true;
+    shoppingIsDone = true;
+    updater();
+});
+
+
+function updater(){
+    let allowance;
+    if (shoppingIsDone === true){
+        allowance = 10;
+    }else{
+        allowance = 5;
     };
-} else if(user === null || user === ""){
-    alert("Canceled");
-} else{
-    alert("I don't know you");
-};
+    
+    reward.textContent = `Child earn ${allowance} Euro this week.`;
+}
