@@ -28,7 +28,7 @@ btn.addEventListener("click", () => {
         while (startNumber <= userNumber){
             document.getElementById("fizzBuzz").innerText += " " + fizzBuzz(startNumber);
             startNumber++
-        }  
+        }
     };
 });
 
