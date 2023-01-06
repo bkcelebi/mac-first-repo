@@ -69,3 +69,39 @@ for (let i = 0; i < myFam.length; i++){
         properLayout.innerText += ` ${myFam[i]},`
     }
 }
+
+
+//telephone number practice with break
+
+const input = document.getElementById("search");
+const button = document.getElementById("btn");
+const findings = document.getElementById("findings");
+
+const contactList = 
+    [
+        'Chris:2232322', 
+        'Sarah:3453456', 
+        'Bill:7654322', 
+        'Mary:9998769', 
+        'Dianne:9384975'
+    ];
+
+button.addEventListener("click", () => {
+    const searchName = input.value.toLowerCase();
+    input.value = "";
+    input.focus();
+    findings.textContent = "";
+    for (const contact of contactList){
+        const splitContact = contact.split(':');
+        if (splitContact[0].toLowerCase() === searchName){
+            findings.textContent = `${splitContact[0]}'s number is ${splitContact[1]}`;
+            break;
+        }
+    }
+
+    if (findings.textContent === ''){
+        findings.textContent = "Contact not found";
+    }
+
+});
+
