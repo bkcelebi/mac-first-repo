@@ -108,5 +108,63 @@ const multiplyNumeric = obj => {
 };
 
 
-multiplyNumeric(menu);
+// multiplyNumeric(menu);
+
+const person = {
+    name: {
+        first: 'Bob',
+        last: 'Smith',
+    },
+    age: 32,
+    bio(){
+        console.log(`${this.name.first} and ${this.name.last} are ${this.age} years old.`)
+    },
+    introduceSelf(){
+        console.log(`Hi! I'm ${this.name.first}`)
+    },
+
+    logProperty(propertyName) {
+        console.log(this[propertyName]);
+    },
+};
+
+
+const person1 = {
+    name: 'Chris',
+    introduceSelf(){
+        console.log(`Hi! I'm ${this.name}.`);
+    },
+};
+
+
+const person2 = {
+    name: 'Deepti',
+    introduceSelf(){
+        console.log(`Hi! I'm ${this.name}.`);
+    },
+};
+
+function createUser(name) {
+    const obj = {};
+    obj.name = name;
+    obj.introduceSelf = function(){
+        console.log(`Hi! I'm ${this.name}.`);
+    };
+    return obj;
+};
+
+// console.log(createUser('Burak'));
+// const per = createUser('burak');
+// console.log(per.introduceSelf());
+
+function Person(name){
+    this.name = name;
+    this.introduceSelf = function(){
+        console.log(`Hi! I'm ${this.name}.`);
+    };
+}
+
+const me = new Person('burak');
+console.log(me.introduceSelf());
+
 
