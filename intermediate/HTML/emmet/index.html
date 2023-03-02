@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- wrap it by selecting the element wanna be wrapped and call emmet -->
+<!-- 
+    <div id="page">
+        <p>Hello world</p>
+    </div> -->
+
+    <div class="wrapper">
+        <h1>title</h1>
+        <div class="content">
+            <div id="page">
+                <p>Hello world</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Wrapping individual lines -->
+    <nav>
+        <ul class="nav">
+            <li class="nav-item1">
+                <a href="">About</a>
+            </li>
+            <li class="nav-item2">
+                <a href="">News</a>
+            </li>
+            <li class="nav-item3">
+                <a href="">Products</a>
+            </li>
+            <li class="nav-item4">
+                <a href="">Contacts</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- Removing list markers  -->
+<!-- 
+    1. About
+    2. News
+    3. Products
+    4. Contacts -->
+    <!-- trim it by |t 'pipe-t at the end' -->
+    <ul class="nav">
+        <lu class="nav-item1">
+            <a href="">About</a>
+        </lu>
+        <lu class="nav-item2">
+            <a href="">News</a>
+        </lu>
+        <lu class="nav-item3">
+            <a href="">Products</a>
+        </lu>
+        <lu class="nav-item4">
+            <a href="">Contacts</a>
+        </lu>
+    </ul>
+
+    
+    <!-- Controlling output position -->
+<!-- 
+    About
+    News
+    Products
+    Contacts -->
+
+    <!-- ul>li[title=$#]*>{$#}+img[alt=$#] -->
+
+    <ul>
+        <li title="About">
+            About
+            <img src="" alt="About">
+        </li>
+        <li title="News">
+            News
+            <img src="" alt="News">
+        </li>
+        <li title="Products">
+            Products
+            <img src="" alt="Products">
+        </li>
+        <li title="Contacts">
+            Contacts
+            <img src="" alt="Contacts">
+        </li>
+    </ul>
+
+    <ul>
+        <li title="chooseme"><img src="" alt=""><a href=""></a></li>
+        <li title="chooseme"><img src="" alt=""><a href=""></a></li>
+        <li title="chooseme"><img src="" alt=""><a href=""></a></li>
+        <li title="chooseme"><img src="" alt=""><a href=""></a></li>
+    </ul>
+
+
+    <!-- Remove Tag by cmd + shift  + 2  -->
+    <!-- <ul>
+        <li title="About">
+            About
+            <img src="" alt="About">
+        </li>
+        <li title="News">
+            News
+            <img src="" alt="News">
+        </li>
+        <li title="Products">
+            Products
+            <img src="" alt="Products">
+        </li>
+        <li title="Contacts">
+            Contacts
+            <img src="" alt="Contacts">
+        </li>
+    </ul> -->
+
+
+    <ul>
+        <li title="About">
+            About
+            <img src="" alt="About">
+        </li>
+        <li title="News">
+            News
+            <img src="" alt="News">
+        </li>
+        <li title="Products">
+            Products
+            <img src="" alt="Products">
+        </li>
+        <li title="Contacts">
+            Contacts
+            <img src="" alt="Contacts">
+        </li> 
+    </ul>
+        
+</body>
+</html>
