@@ -1,0 +1,53 @@
+/* body{
+    background: black;
+} */
+
+/* main div{
+    background-color: aquamarine;
+} */
+
+/* main > div{
+    background-color: aqua;
+} */
+
+/* main > div > div{
+    background-color: black;
+} */
+
+/* .group1 + div{
+    background-color: aqua;
+} */
+
+/* .group1 + div + div {
+    background-color: blue;
+} */
+
+/* .group1 ~ div {
+    background-color: antiquewhite;
+} */
+
+article p:first-child{
+    background-color: aqua;
+}
+
+main div:first-child{
+    background-color: aquamarine;
+}
+
+section p:first-child::first-line{
+    font-size: 130%;
+    font-weight: bold;
+}
+
+article p:first-child::before{
+    content: "🔥 ";
+}
+
+section p:first-child::before{
+    content: " ";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: aqua;
+    margin-right: 5px;
+}
