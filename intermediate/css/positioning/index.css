@@ -1,0 +1,57 @@
+header.relative{
+    position: relative;
+    top: 30px;
+    line-height: 1.3em;
+
+}
+
+.relative > p > a {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    border: 3px solid rgb(88, 15, 15);
+    border-radius: 5px;
+    background-color: firebrick;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.relative > p > a:hover{
+    opacity: 0.8;
+    background-color: grey;
+}
+
+main{
+    margin-top: 40px;
+}
+
+.card-container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-image{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.card-body{
+    position: absolute;
+    width: 450px;
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+    top: 8rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: roboto;
+}
+
+.card-heading{
+    position: absolute;
+}
