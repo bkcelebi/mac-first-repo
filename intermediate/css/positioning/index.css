@@ -25,6 +25,11 @@ header.relative{
 
 main{
     margin-top: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .card-container{
@@ -54,4 +59,23 @@ main{
 
 .card-heading{
     position: absolute;
+}
+
+.sticky{
+    width: 100px;
+    height: 50px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid black;
+    position: sticky;
+    top: 10px;
+}
+
+footer{
+    height: 100vh;
+    background: burlywood;
 }
