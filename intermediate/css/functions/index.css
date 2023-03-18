@@ -74,30 +74,58 @@ main{
     width: 100%;
     background: rgb(101,246,156);
     background: linear-gradient(191deg, rgba(101,246,156,1) 19%, rgba(148,183,233,1) 79%);
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 30px;
+}
+
+#text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 #container{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     border: 6px solid black;
     resize: both;
     overflow: auto;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
 }
 
-#iconHolder{
+.min{
     width: min(150px, 100%);
 	height: min(150px, 100%);
     border: 6px solid blue;
+}
+
+.max{
+    width: max(550px, 100%);
+	height: max(550px, 100%);
+    border: 6px solid blue;
+}
+
+.clamp{
+    width: clamp(150px, 50%, 300px);
+    height: clamp(150px, 50%, 300px);
+    border: 6px solid blue;
+}
+
+main > p {
+    position: absolute;
+    bottom: 50px;
+    padding: 0 50px;
+    width: clamp(45ch, 50%, 75ch);
+
 }
 
 footer{
     height: var(--footer);
     width: 100%;
     background-color: rgb(148 183 233);
+    font-size: clamp(1.5rem, 2vw, 3rem);
 }
