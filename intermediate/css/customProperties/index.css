@@ -1,0 +1,21 @@
+:root{
+    --my-background-color: rgb(149, 82, 82);
+    --fallback-color: rgb(149, 82, 82);
+}
+
+
+body {
+    background-color: var(--my-background-color, var(--fallback-color,rgb(149, 82, 82)));
+}
+
+.cool-div {
+    --main-bg: red;
+}
+
+.cool-paragraph {
+    background-color: var(--main-bg);
+}
+
+.boring-paragraph {
+    background-color: var(var(--main-bg));
+}
