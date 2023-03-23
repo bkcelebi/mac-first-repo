@@ -6,48 +6,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Basics</title>
     <link rel="stylesheet" href="index.css" />
+    <script src="./index.js" defer></script>
   </head>
   <body>
-    <form action="kcdevs.com" method="post">
-      <label for="first_name">First Name:</label>
-      <input type="text" id="first_name" placeholder="John" name="first_name" />
-      <label for="user_email">Email:</label>
-      <input
-        type="email"
-        id="user_email"
-        name="user_email"
-        placeholder="example@example.com"
-      />
-      <label for="user_password">Password:</label>
-      <input type="password" name="user_password" id="user_password" />
-      <label for="amount">Amount:</label>
-      <input type="number" name="amount" id="amount" />
-      <label for="dob">Date of Birth:</label>
-      <input type="date" name="dob" id="dob" />
-      <label for="comments">Comments:</label>
-      <textarea name="comments" id="comments" cols="30" rows="10">
-        Some initial content
-      </textarea>
-      <select name="Car" id="">
-        <option value="mercedes">Mercedes</option>
-        <option value="tesla" selected>Tesla</option>
-        <option value="volvo">Volvo</option>
-        <option value="bmw">Bmw</option>
-        <option value="mini">Mini</option>
-        <option value="ford">Ford</option>
-      </select>
-      <select name="Car" id="">
-        <optgroup label="firstClass">
+    <form action="" method="post">
+      <fieldset class="fieldset">
+        <legend>Personal Information</legend>
+
+        <label for="first_name">First Name:</label>
+        <input
+          type="text"
+          id="first_name"
+          placeholder="John"
+          name="first_name"
+        />
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Smith" />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="dob" id="dob" />
+
+        <label for="user_password">Password:</label>
+        <input type="password" name="user_password" id="user_password" />
+
+        <label for="user_email">Email:</label>
+        <input
+          type="email"
+          id="user_email"
+          name="user_email"
+          placeholder="example@example.com"
+        />
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend>Optional Information</legend>
+        <label for="amount">Amount:</label>
+        <input type="number" name="amount" id="amount" />
+        <label for="comments">Comments:</label>
+        <textarea name="comments" id="comments" cols="30" rows="10">
+          Some initial content
+        </textarea>
+        <select name="Car" id="1">
           <option value="mercedes">Mercedes</option>
           <option value="tesla" selected>Tesla</option>
           <option value="volvo">Volvo</option>
-        </optgroup>
-        <optgroup label="secondClass">
           <option value="bmw">Bmw</option>
           <option value="mini">Mini</option>
           <option value="ford">Ford</option>
-        </optgroup>
-      </select>
+        </select>
+
+        <select name="Car" id="2">
+          <optgroup label="firstClass">
+            <option value="mercedes">Mercedes</option>
+            <option value="tesla" selected>Tesla</option>
+            <option value="volvo">Volvo</option>
+          </optgroup>
+          <optgroup label="secondClass">
+            <option value="bmw">Bmw</option>
+            <option value="mini">Mini</option>
+            <option value="ford">Ford</option>
+          </optgroup>
+        </select>
+      </fieldset>
+    </form>
+
+    <br /><br /><br />
+    <label for="userName">User Name:</label><br />
+    <input type="text" id="userName" name="userName" placeholder="John" />
+    <button type="button" id="greeting">Greet Me!</button>
+    <p class="greetingArea"></p>
+
+    <br /><br /><br />
+
+    <fieldset class="tickets fieldset">
+      <legend class="ticketLegend">Ticket Types</legend>
+      <div class="balanceRadio">
+        <input type="radio" name="ticketType" id="child" value="child" />
+        <label for="child">Child</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          name="ticketType"
+          id="adult"
+          value="adult"
+          checked
+        />
+        <label for="adult">Adult</label>
+      </div>
+      <div>
+        <input type="radio" name="ticketType" id="senior" value="senior" />
+        <label for="senior">Senior</label>
+      </div>
+    </fieldset>
+
+    <br /><br /><br />
+
+    <h1>Pizza Toppings</h1>
+    <div>
+      <input
+        type="checkbox"
+        id="sausage"
+        name="toppings"
+        value="sausage"
+        checked
+      />
+      <label for="sausage">Sausage</label>
+    </div>
+    <div>
+      <input type="checkbox" id="onions" name="toppings" value="onions" />
+      <label for="onions">Onions</label>
+    </div>
+    <div>
+      <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni" />
+      <label for="pepperoni">Pepperoni</label>
+    </div>
+    <div>
+      <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms" />
+      <label for="mushrooms">Mushrooms</label>
+    </div>
+
+    <br /><br />
+
+    <div class="newsletter">
+      <input type="checkbox" id="newsletter" name="newsletter" checked />
+      <label for="newsletter">Send me the news letter</label>
+    </div>
+
+    <br /><br />
+
+    <form action="">
+      <label for="sample1">Sample:</label>
+      <input type="text" value="sample1" />
+      <label for="sample2">Sample:</label>
+      <input type="text" />
+      <button type="submit">I am a button</button>
+      <button type="reset">Reset</button>
     </form>
   </body>
 </html>

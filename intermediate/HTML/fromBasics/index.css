@@ -71,3 +71,48 @@ h6 {
 }
 
 /* ############ CSS RESET ENDS ############# */
+
+.newsletter {
+  display: flex;
+  gap: 0.5rem;
+  /* align-items: center; */
+}
+
+#newsletter {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.tickets {
+  display: flex;
+  gap: 1rem;
+}
+
+.fieldset {
+  border: 0;
+}
+
+legend {
+  font-weight: 600;
+}
+
+#child {
+  accent-color: rebeccapurple;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.balanceRadio {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* label[for="child"] {
+  transform: translateY(0.02rem);
+} */
+
+#sausage {
+  accent-color: orange;
+  width: 1.5rem;
+  height: 1.5rem;
+}
