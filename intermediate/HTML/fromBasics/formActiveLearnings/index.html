@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Practice</title>
     <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
   </head>
   <body>
     <section>
@@ -41,7 +42,7 @@
             <textarea name="msg" class="firstFormInput" id="msg"></textarea>
           </li>
           <li class="button">
-            <button type="submit">Submit</button>
+            <button class="firstForm" type="submit">Submit</button>
           </li>
         </ul>
       </form>
@@ -50,7 +51,7 @@
     <section class="fruitJuice">
       <h2>How to structure a web form</h2>
       <form class="test" action="">
-        <fieldset class="fruitField">
+        <fieldset class="fruitField" disabled>
           <legend>Fruit Juice Size</legend>
           <p class="fruitP">
             <input
@@ -67,6 +68,7 @@
               id="medium"
               name="fruitJuiceSize"
               value="medium"
+              checked
             />
             <label for="medium">Medium</label>
           </p>
@@ -79,6 +81,43 @@
             />
             <label for="large">Large</label>
           </p>
+        </fieldset>
+        <fieldset class="vegField">
+          <legend class="vegLegend">
+            Choose all the vegetables you like to eat
+          </legend>
+          <ul class="vegList">
+            <li>
+              <input
+                type="checkbox"
+                name="vegetable"
+                id="carrots"
+                value="carrots"
+                checked
+              />
+              <label for="carrot">Carrots</label>
+            </li>
+            <li>
+              <input type="checkbox" id="peas" name="vegetable" value="peas" />
+              <label for="peas">Peas</label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="cabbage"
+                name="vegetable"
+                value="cabbage"
+              />
+              <label for="cabbage">Cabbage</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="vegField">
+          <legend>Upload your file</legend>
+          <input type="file" name="file" id="file" accept="image/*" multiple />
+          <input type="file" accept="image/*;capture=camera" />
+          <input type="file" accept="video/*;capture=camcorder" />
+          <input type="file" accept="audio/*;capture=microphone" />
         </fieldset>
       </form>
     </section>
@@ -115,7 +154,12 @@
                 <label for="name"
                   >Name: <span aria-label="required">*</span></label
                 >
-                <input type="text" id="name" name="name" value="John Bloggs" />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="John Bloggs"
+                />
               </p>
               <p>
                 <label for="email"
@@ -125,7 +169,7 @@
                   type="email"
                   id="email"
                   name="email"
-                  value="example@example.com"
+                  placeholder="example@example.com"
                 />
               </p>
               <p>
@@ -168,6 +212,24 @@
             />
           </p>
         </section>
+        <input type="hidden" id="timestamp" name="timestamp" value="" />
+        <p class="disable">
+          <input
+            type="checkbox"
+            name="disable"
+            id="disable"
+            value="yes"
+            checked
+          />
+          <label for="disable">
+            <span aria-label="required"
+              >* Agree with the terms and conditions</span
+            ></label
+          >
+        </p>
+        <div class="paymentSubmitButton">
+          <button id="paymentSubmissionButton" type="submit">Submit</button>
+        </div>
       </form>
     </section>
 

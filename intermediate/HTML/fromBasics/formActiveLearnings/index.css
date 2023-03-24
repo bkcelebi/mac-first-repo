@@ -19,7 +19,7 @@
 */
 html,
 body {
-  height: 100%;
+  /* height: 100%; */
 }
 /*
   Typographic tweaks!
@@ -124,7 +124,7 @@ textarea {
   padding-left: 5rem;
 }
 
-button {
+.firstForm {
   margin-left: 0.25rem;
   width: 15em;
   border-radius: 0.5rem;
@@ -152,6 +152,26 @@ button {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.vegField {
+  border: none;
+  margin-top: 0.5rem;
+}
+
+.vegList {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0.125rem;
+}
+
+.vegList li input {
+  accent-color: rebeccapurple;
+}
+
+[type="file"] {
+  margin-top: 0.3rem;
+}
+
 .paymentFormSection {
   width: 25rem;
   border: 1px solid #ccc;
@@ -176,6 +196,14 @@ button {
   color: red;
   font-style: italic;
   font-weight: 600;
+}
+
+.disable {
+  display: flex;
+  justify-content: center;
+  color: #979797;
+  font-weight: 600;
+  accent-color: #979797;
 }
 
 .titleLegend {
@@ -252,6 +280,25 @@ button {
   margin-bottom: 1rem;
 }
 
-.bottom {
-  margin-bottom: 50vh;
+.paymentSubmitButton {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.paymentSubmitButton button {
+  width: 5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #6c6c6c;
+}
+
+.paymentSubmitButton button:hover,
+.paymentSubmitButton button:focus {
+  background: #959494;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.paymentSubmitButton button:disabled {
+  cursor: not-allowed;
 }
