@@ -29,3 +29,16 @@ paymentSubmissionButton.addEventListener("click", () => {
     `${new Date().getSeconds()}`;
   console.log(timestamp.value);
 });
+
+// ######## SLIDER CONFIGURATION STARTS #########
+
+const slider = document.querySelector("#slider");
+const output = document.querySelector(".slider-output");
+
+output.textContent = slider.value;
+
+slider.addEventListener("input", () => {
+  output.textContent = slider.value;
+});
+
+// ######## SLIDER CONFIGURATION ENDS #########

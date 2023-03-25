@@ -72,11 +72,12 @@ h6 {
 /* ############ CSS RESET ENDS ############# */
 
 body {
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 h2 {
@@ -170,6 +171,17 @@ textarea {
 
 [type="file"] {
   margin-top: 0.3rem;
+}
+
+.tel,
+.url,
+.numb,
+.slider,
+.date,
+.color,
+.comment {
+  border: none;
+  margin-top: 0.5rem;
 }
 
 .paymentFormSection {

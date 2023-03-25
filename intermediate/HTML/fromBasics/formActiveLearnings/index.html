@@ -119,6 +119,99 @@
           <input type="file" accept="video/*;capture=camcorder" />
           <input type="file" accept="audio/*;capture=microphone" />
         </fieldset>
+
+        <fieldset class="vegField">
+          <!-- <legend>Search</legend> -->
+          <label for="search">Search:</label>
+          <input type="search" name="search" id="search" />
+        </fieldset>
+
+        <fieldset class="tel">
+          <label for="tel">Phone:</label>
+          <input type="tel" name="tel" id="tel" />
+        </fieldset>
+
+        <fieldset class="url">
+          <label for="url">URL:</label>
+          <input type="url" name="url" id="url" />
+        </fieldset>
+
+        <fieldset class="numb">
+          <label for="numb">Number:</label>
+          <input
+            type="number"
+            name="numb"
+            id="numb"
+            min="2"
+            max="15"
+            step="any"
+          />
+          <input
+            type="number"
+            name="numb2"
+            id="numb2"
+            min="0"
+            max="1"
+            step="0.01"
+          />
+        </fieldset>
+
+        <fieldset class="slider">
+          <label for="slider">Choose a max house price:</label>
+          <input
+            type="range"
+            name="slider"
+            id="slider"
+            min="100000"
+            max="500000"
+            step="100"
+            value="250000"
+          />
+          <output class="slider-output" for="slider"></output>
+        </fieldset>
+
+        <fieldset class="date">
+          <label for="datetime">Choose a datetime:</label>
+          <input type="datetime-local" name="datetime" id="datetime" /><br />
+          <label for="month">Choose a month:</label>
+          <input type="month" name="month" id="month" /><br />
+          <label for="time">Choose a time:</label>
+          <input type="time" name="time" id="time" /><br />
+          <label for="week">Choose a week:</label>
+          <input type="week" name="week" id="week" /><br />
+          <label for="dob">Date of Birth:</label>
+          <input
+            type="date"
+            id="dob"
+            name="dob"
+            max="2005-03-25"
+            min="1900-03-25"
+            step="1"
+          />
+        </fieldset>
+
+        <fieldset class="color">
+          <label for="colorPicker">Choose your color:</label>
+          <input type="color" name="colorPicker" id="colorPicker" />
+        </fieldset>
+
+        <fieldset class="comment">
+          <label for="comment">Comment:</label>
+          <textarea
+            name="comment"
+            id="comment"
+            cols="20"
+            rows="10"
+            wrap="hard"
+          ></textarea>
+          <!--
+            wrap='soft' The values are soft (the default value), 
+            which means the text 
+            submitted is not wrapped but the text rendered 
+            by the browser is wrapped
+            wrap='hard' for both side 
+          -->
+        </fieldset>
       </form>
     </section>
 
