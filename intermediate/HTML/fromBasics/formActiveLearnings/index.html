@@ -212,6 +212,128 @@
             wrap='hard' for both side 
           -->
         </fieldset>
+
+        <fieldset class="select">
+          <label for="sample">Sample select:</label>
+          <select name="sample" id="sample">
+            <option value="sample1">sample1</option>
+            <option value="sample2">sample2</option>
+            <option value="sample3" selected>sample3</option></select
+          ><br />
+
+          <label for="sample2">Sample select 2:</label>
+          <select name="sample2" id="sample2">
+            <optgroup label="cats">
+              <option value="cat1">cat1</option>
+              <option value="cat2">cat2</option>
+              <option value="cat3">cat3</option>
+            </optgroup>
+            <optgroup label="dogs">
+              <option value="dog1">dog1</option>
+              <option value="dog2">dog2</option>
+              <option value="dog3">dog3</option>
+            </optgroup>
+          </select>
+
+          <select id="simple" name="simple">
+            <option value="banana">Big, beautiful yellow banana</option>
+            <option value="cherry">Succulent, juicy cherry</option>
+            <option value="lemon">Sharp, powerful lemon</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="multipleChoice">
+          <select name="multipleSelect" id="multipleSelect" multiple size="4">
+            <optgroup label="Choices1">
+              <option>Opt1</option>
+              <option>Opt2</option>
+              <option>Opt3</option>
+            </optgroup>
+            <optgroup label="Choices2">
+              <option>Opt4</option>
+              <option>Opt5</option>
+              <option>Opt6</option>
+            </optgroup>
+          </select>
+        </fieldset>
+
+        <fieldset class="autocomplete">
+          <label for="auto">Choose your fruit:</label>
+          <input type="text" name="auto" id="auto" list="fruitList" />
+          <datalist id="fruitList">
+            <option>Apple</option>
+            <option>Banana</option>
+            <option>Blackberry</option>
+            <option>Blueberry</option>
+            <option>Lemon</option>
+            <option>Lychee</option>
+            <option>Peach</option>
+            <option>Pear</option>
+          </datalist>
+          <br />
+
+          <label for="fallbackAuto">Choose your fruit: (fallback)</label>
+          <input
+            type="text"
+            name="fallbackAuto"
+            id="fallbackAuto"
+            list="fallbackAutoList"
+          />
+          <datalist id="fallbackAutoList">
+            <label for="fallbackIncase">Or pick a fruit</label>
+            <select name="fallbackIncase" id="fallbackIncase">
+              <option>Apple</option>
+              <option>Banana</option>
+              <option>Blackberry</option>
+              <option>Blueberry</option>
+              <option>Lemon</option>
+              <option>Lychee</option>
+              <option>Peach</option>
+              <option>Pear</option>
+            </select>
+          </datalist>
+        </fieldset>
+
+        <fieldset class="rangeDatalist">
+          <label for="temperature">Choose a temperature:</label><br />
+          <input
+            type="range"
+            name="temperature"
+            id="temperature"
+            list="temperatureData"
+          />
+          <datalist id="temperatureData">
+            <option value="cold" label="cold"></option>
+            <option value="warm" label="warm"></option>
+            <option value="hot" label="hot"></option>
+          </datalist>
+        </fieldset>
+
+        <fieldset class="colorData">
+          <label for="colorDataSet">Choose your color:</label>
+          <input type="color" name="color" list="colors" />
+          <datalist id="colors">
+            <option>#ff0000</option>
+            <option>#0000ff</option>
+            <option>#00ff00</option>
+            <option>#ffff00</option>
+            <option>#00ffff</option>
+          </datalist>
+        </fieldset>
+
+        <fieldset class="progress">
+          <label for="prog">Your progress:</label>
+          <progress max="100" value="80" id="prog" name="prog">
+            80/100 (this is a fallback value)
+          </progress>
+        </fieldset>
+
+        <fieldset class="meter">
+          <label for="meter">Your result</label>
+          <meter min="0" max="100" low="33" high="66" value="30" optimum="70">
+            30
+          </meter>
+        </fieldset>
       </form>
     </section>
 

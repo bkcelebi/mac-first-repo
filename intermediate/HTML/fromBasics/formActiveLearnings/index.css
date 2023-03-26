@@ -179,9 +179,29 @@ textarea {
 .slider,
 .date,
 .color,
-.comment {
+.comment,
+.select,
+.multipleChoice,
+.autocomplete,
+.rangeDatalist,
+.colorData,
+.progress,
+.meter {
   border: none;
   margin-top: 0.5rem;
+}
+
+input[type="range"] {
+  /* appearance: slider-vertical; */
+  width: 10rem;
+}
+
+#temperatureData {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  writing-mode: vertical-lr;
+  width: 10rem;
 }
 
 .paymentFormSection {
