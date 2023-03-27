@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Postcard From</title>
+    <link rel="stylesheet" href="postcard.css" />
+  </head>
+  <body>
+    <form action="">
+      <h1>to: Mozilla</h1>
+
+      <div id="from">
+        <label for="postcardName">from:</label>
+        <input type="text" name="userPostcardName" id="postcardName" />
+      </div>
+
+      <div id="reply">
+        <label for="postcardMail">reply:</label>
+        <input type="email" name="userPostcardMail" id="postcardMail" />
+      </div>
+
+      <div id="message">
+        <label for="postcardMessage">Your message:</label>
+        <textarea
+          type="text"
+          id="postcardMessage"
+          name="userPostcardMessage"
+        ></textarea>
+      </div>
+
+      <div id="postCardButton">
+        <button type="submit">Send your message</button>
+      </div>
+    </form>
+  </body>
+</html>

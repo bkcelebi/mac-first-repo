@@ -320,17 +320,27 @@
             <option>#00ffff</option>
           </datalist>
         </fieldset>
-
-        <fieldset class="progress">
-          <label for="prog">Your progress:</label>
-          <progress max="100" value="80" id="prog" name="prog">
+        <br />
+        <fieldset class="fieldClass">
+          <legend id="legendID">Your progress</legend>
+          <progress id="progressId" max="100" value="80" id="prog" name="prog">
             80/100 (this is a fallback value)
           </progress>
         </fieldset>
+        <br />
+        <br />
 
-        <fieldset class="meter">
-          <label for="meter">Your result</label>
-          <meter min="0" max="100" low="33" high="66" value="30" optimum="70">
+        <fieldset class="fieldClass">
+          <legend id="legendID">Your result</legend>
+          <meter
+            id="meterId"
+            min="0"
+            max="100"
+            low="33"
+            high="66"
+            value="30"
+            optimum="70"
+          >
             30
           </meter>
         </fieldset>
@@ -444,6 +454,35 @@
         </p>
         <div class="paymentSubmitButton">
           <button id="paymentSubmissionButton" type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <form action="">
+        <h1>to: Mozilla</h1>
+
+        <div id="from">
+          <label for="postcardName">from:</label>
+          <input type="text" name="userPostcardName" id="postcardName" />
+        </div>
+
+        <div id="reply">
+          <label for="postcardMail">reply:</label>
+          <input type="email" name="userPostcardMail" id="postcardMail" />
+        </div>
+
+        <div id="message">
+          <label for="postcardMessage">Your message:</label>
+          <textarea
+            type="text"
+            id="postcardMessage"
+            name="userPostcardMessage"
+          ></textarea>
+        </div>
+
+        <div id="postCardButton">
+          <button type="submit">Send your message</button>
         </div>
       </form>
     </section>

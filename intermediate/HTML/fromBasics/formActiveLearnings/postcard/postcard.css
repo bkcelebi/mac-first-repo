@@ -1,0 +1,174 @@
+/* ############ CSS RESET STARTS ############# */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+/* ############ CSS RESET ENDS ############# */
+
+@font-face {
+  font-family: "handwriting";
+  src: url("fonts/journal-webfont.woff2") format("woff2"),
+    url("fonts/journal-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "typewriter";
+  src: url("fonts/mom___-webfont.woff2") format("woff2"),
+    url("fonts/mom___-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font: 1.3em sans-serif;
+  padding: 0.5em;
+  background: #222;
+}
+
+form {
+  position: relative;
+  width: 740px;
+  height: 498px;
+  margin: 0 auto;
+  padding: 1em;
+  background: #fff url(postcardBackground.jpeg);
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10em 1em 1em 1em;
+}
+
+h1 {
+  font: 1em "typewriter", monospace;
+  align-self: end;
+}
+
+#message {
+  grid-row: 1/5;
+}
+
+#from,
+#reply {
+  display: flex;
+}
+
+label {
+  font: 0.8em "typewriter", sans-serif;
+}
+
+input,
+textarea {
+  font: 1.4em/1.5em "handwriting", cursive, sans-serif;
+  border: none;
+  padding: 0 10px;
+  /* margin: 0; */
+  width: 80%;
+  background: none;
+}
+
+input:focus,
+textarea:focus {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+textarea {
+  display: block;
+  padding: 10px;
+  margin: 10px 0 0 -10px;
+  width: 106%;
+  height: 90%;
+  border-right: 1px solid;
+  resize: none;
+  overflow: auto;
+}
+
+button {
+  padding: 5px;
+  font: bold 0.6em sans-serif;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  transform: rotate(-1.5deg);
+}
+
+button::after {
+  content: " >>>";
+}
+
+button:hover,
+button:focus {
+  outline: none;
+  background: #000;
+  color: #fff;
+}
