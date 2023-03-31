@@ -116,3 +116,24 @@ legend {
   width: 1.5rem;
   height: 1.5rem;
 }
+
+#testAppearance {
+  /* appearance: none; */
+  width: 20rem;
+  height: 10rem;
+  border-radius: 1rem;
+  /* border: none; */
+  /* background: #ccc; */
+  box-shadow: 5px 5px 5px 2px #ccc;
+}
+
+#testRange {
+  appearance: none;
+  background: red;
+  height: 2px;
+  outline: 1px solid transparent;
+}
+
+#testColor {
+  border: 0;
+}
