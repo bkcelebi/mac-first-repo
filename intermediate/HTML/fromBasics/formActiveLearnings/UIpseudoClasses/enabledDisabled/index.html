@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enabled Disabled Pseudo Classes</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <form>
+      <fieldset id="shipping">
+        <legend>Shipping address</legend>
+        <div>
+          <label for="shippingFname">First name:</label>
+          <input type="text" id="shippingFname" name="shippingFname" required />
+        </div>
+        <div>
+          <label for="shippingLname">Last name:</label>
+          <input type="text" id="shippingLname" name="shippingLname" required />
+        </div>
+        <div>
+          <label for="shippingPcode">Zip/Postal code:</label>
+          <input type="text" id="shippingPcode" name="shippingPcode" required />
+        </div>
+      </fieldset>
+      <fieldset id="billing">
+        <legend>Billing address</legend>
+        <div>
+          <label for="billingCheckbox">Same as shipping address:</label>
+          <input
+            type="checkbox"
+            id="billingCheckbox"
+            name="billingCheckbox"
+            checked
+          />
+        </div>
+        <div>
+          <label for="billingFname" class="billingLabel disabledLabel">
+            First name:
+          </label>
+          <input
+            type="text"
+            id="billingFname"
+            name="billingFname"
+            required
+            disabled
+          />
+        </div>
+        <div>
+          <label for="billingLname" class="billingLabel disabledLabel">
+            Last name:
+          </label>
+          <input
+            type="text"
+            id="billingLname"
+            name="billingLname"
+            required
+            disabled
+          />
+        </div>
+        <div>
+          <label for="billingPcode" class="billingLabel disabledLabel">
+            Zip/Postal code:
+          </label>
+          <input
+            type="text"
+            id="billingPcode"
+            name="billingPcode"
+            required
+            disabled
+          />
+        </div>
+      </fieldset>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

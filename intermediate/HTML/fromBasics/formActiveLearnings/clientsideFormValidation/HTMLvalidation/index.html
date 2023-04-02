@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Client-side Form Validation</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        <fieldset>
+          <legend>
+            Do you have a driver's license?
+            <span aria-label="required">*</span>
+          </legend>
+          <input type="radio" required name="driver" id="r1" value="yes" />
+          <label for="r1">Yes</label>
+          <input type="radio" required name="driver" id="r2" value="no" />
+          <label for="r2">No</label>
+        </fieldset>
+      </div>
+      <div>
+        <label for="n1">How old are you?</label>
+        <input
+          type="number"
+          name="age"
+          id="n1"
+          min="12"
+          max="120"
+          step="1"
+          pattern="\d+"
+        />
+        <label for="t1">
+          What's your favorite fruit?
+          <span aria-label="required">*</span>
+        </label>
+        <input
+          type="text"
+          id="t1"
+          name="fruit"
+          list="l1"
+          required
+          pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range"
+        />
+        <datalist id="l1">
+          <option>Banana</option>
+          <option>Cherry</option>
+          <option>Apple</option>
+          <option>Strawberry</option>
+          <option>Lemon</option>
+          <option>Orange</option>
+        </datalist>
+      </div>
+      <div>
+        <label for="t2">What's your email address?</label>
+        <input type="email" name="email" id="t2" />
+      </div>
+      <div>
+        <label for="t3">Leave a short message</label>
+        <textarea name="msg" id="t3" rows="5" maxlength="140"></textarea>
+      </div>
+      <div>
+        <button>Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
