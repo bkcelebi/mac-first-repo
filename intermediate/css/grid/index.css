@@ -1,0 +1,18 @@
+.container {
+  display: grid;
+  /* grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px; */
+  /* shorthand property first row and then column */
+  grid-template: 50px 50px/ 50px 50px;
+  grid-auto-rows: 50px;
+  grid-auto-flow: column;
+  grid-auto-columns: 50px;
+  /* column-gap: 10px;
+  row-gap: 100px; */
+  /* shorthand property first row and then column */
+  gap: 15px 25px;
+}
+
+.container > div {
+  border: 1px dashed blueviolet;
+}
