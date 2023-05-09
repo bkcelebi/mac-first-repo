@@ -2,14 +2,23 @@
   resize: both;
   overflow: auto;
   display: grid;
-  gap: 4px;
+  /* gap: 4px; */
   padding: 4px;
   border: 1px solid grey;
   background: skyblue;
   /* grid-template-rows: 150px 150px;
   grid-template-columns: 150px 150px 150px 150px 150px; */
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 125px) repeat(3, 1fr);
+  /* grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 125px) repeat(3, 1fr); */
+  /* grid-template-rows: repeat(2, min(200px, 50%));
+  grid-template-columns: repeat(5, max(120px, 15%)); */
+  /* grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: rep(eat(5, minmax(150px, 200px)); */
+  /* grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(5, clamp(150px, 20%, 200px)); */
+  /* width: 1000px; */
+  width: 500px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
 .grid-item {
