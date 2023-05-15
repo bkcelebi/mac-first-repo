@@ -1,0 +1,49 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 20%);
+  justify-content: center;
+  gap: 10px;
+}
+
+.child {
+  background: pink;
+  height: 100px;
+}
+
+.container2 {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  /* max-width: 500px; */
+  /* justify-content: center; */
+}
+
+.child2 {
+  height: 100px;
+  min-width: 300px;
+  flex: auto;
+  background: palegreen;
+}
+
+.container3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.child3 {
+  background: orange;
+  display: flex;
+  padding: 25px;
+  justify-content: space-between;
+}
+
+.gChild {
+  height: 50px;
+  background: darkred;
+  flex: 0 1 30%;
+}
+
+.lastRow {
+  grid-column: 1 / 3;
+}
