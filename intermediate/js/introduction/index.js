@@ -17,69 +17,69 @@ const myObject = {
 // console.log(myObject.variable); //undefined it's looking for a property named 'variable' in our object
 // console.log(myObject("property"));
 
-const playerOneName = "tim";
-const playerTwoName = "jenn";
-const playerOneMarker = "X";
-const playerTwoMarker = "O";
+// const playerOneName = "tim";
+// const playerTwoName = "jenn";
+// const playerOneMarker = "X";
+// const playerTwoMarker = "O";
 
-const playerOne = {
-  name: "tim",
-  marker: "X",
-  score: 15,
-};
+// const playerOne = {
+//   name: "tim",
+//   marker: "X",
+//   score: 15,
+// };
 
-const playerTwo = {
-  name: "jenn",
-  marker: "O",
-  score: 5,
-};
+// const playerTwo = {
+//   name: "jenn",
+//   marker: "O",
+//   score: 5,
+// };
 
-// function printName(player) {
-//   console.log(player.name);
+// // function printName(player) {
+// //   console.log(player.name);
+// // }
+
+// // printName(playerTwo);
+
+// function keepScore() {
+//   if (playerOne.score >= 10) {
+//     gameOver(playerOne);
+//   } else if (playerTwo.score >= 10) {
+//     gameOver(playerTwo);
+//   }
 // }
-
-// printName(playerTwo);
-
-function keepScore() {
-  if (playerOne.score >= 10) {
-    gameOver(playerOne);
-  } else if (playerTwo.score >= 10) {
-    gameOver(playerTwo);
-  }
-}
 
 // keepScore();
 
-function gameOver(winnerName) {
-  console.log("Congratulations");
-  console.log(winnerName.name + " is the winner!");
-}
+// function gameOver(winnerName) {
+//   console.log("Congratulations");
+//   console.log(winnerName.name + " is the winner!");
+// }
 
-function Player(name, marker) {
-  this.name = name;
-  this.marker = marker;
-  this.sayName = function () {
-    console.log(name);
-  };
-}
+// function Player(name, marker) {
+//   this.name = name;
+//   this.marker = marker;
+//   this.sayName = function () {
+//     console.log(name);
+//   };
+// }
 
-const player1 = new Player("Mike", "X");
-const player2 = new Player("Alise", "O");
+// const player1 = new Player("Mike", "X");
+// const player2 = new Player("Alise", "O");
 
-console.log(player1.name);
-console.log(player2.name);
+// console.log(player1.name);
+// console.log(player2.name);
 
-console.log(Object.getPrototypeOf(player1) === Player.prototype);
-Object.getPrototypeOf(player2) === Player.prototype;
+// console.log(Object.getPrototypeOf(player1) === Player.prototype);
+// Object.getPrototypeOf(player2) === Player.prototype;
 
-console.log(Object.getPrototypeOf(player1) === Object.getPrototypeOf(player2));
+// console.log(Object.getPrototypeOf(player1) === Object.getPrototypeOf(player2));
 
-Player.prototype.sayHello = function () {
-  console.log("Hello, I'm a player!");
-};
+// Player.prototype.sayHello = function () {
+//   console.log("Hello, I'm a player!");
+// };
 
-player1.sayHello();
-player2.sayHello();
+// player1.sayHello();
+// player2.sayHello();
 
 // const player = new Player("burak", "O");
 // console.log(player.name);
@@ -137,16 +137,35 @@ player2.sayHello();
 // const studentTwo = new NinthGrade("perl");
 // studentTwo.sayName();
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-  this.info = function () {
-    return `${title} by ${author}, ${pages} pages, ${read}`;
+// function Book(title, author, pages, read) {
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.read = read;
+//   this.info = function () {
+//     return `${title} by ${author}, ${pages} pages, ${read}`;
+//   };
+// }
+
+// const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, "not read");
+
+// console.log(theHobbit.info());
+
+function Player(name, marker) {
+  this.name = name;
+  this.marker = marker;
+  this.sayName = function () {
+    console.log(name);
   };
 }
 
-const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, "not read");
+console.log(Object.getPrototypeOf(Player.prototype) === Object.prototype);
 
-console.log(theHobbit.info());
+const player1 = new Player("Burky", "X");
+
+console.log(player1.valueOf());
+
+console.log(player1.hasOwnProperty("valueOf"));
+console.log(Object.prototype.hasOwnProperty("valueOf"));
+
+console.log(Object.getPrototypeOf(Object.prototype));
