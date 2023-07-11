@@ -1,5 +1,9 @@
 "use strict";
 
+function log(x) {
+  console.log(x);
+}
+
 const myObject = {
   property: "Value",
   otherProperty: 77,
@@ -151,21 +155,102 @@ const myObject = {
 
 // console.log(theHobbit.info());
 
-function Player(name, marker) {
-  this.name = name;
-  this.marker = marker;
-  this.sayName = function () {
-    console.log(name);
-  };
-}
+// function Player(name, marker) {
+//   this.name = name;
+//   this.marker = marker;
+//   this.sayName = function () {
+//     console.log(name);
+//   };
+// }
 
-console.log(Object.getPrototypeOf(Player.prototype) === Object.prototype);
+// console.log(Object.getPrototypeOf(Player.prototype) === Object.prototype);
 
-const player1 = new Player("Burky", "X");
+// const player1 = new Player("Burky", "X");
 
-console.log(player1.valueOf());
+// console.log(player1.valueOf());
 
-console.log(player1.hasOwnProperty("valueOf"));
-console.log(Object.prototype.hasOwnProperty("valueOf"));
+// console.log(player1.hasOwnProperty("valueOf"));
+// console.log(Object.prototype.hasOwnProperty("valueOf"));
 
-console.log(Object.getPrototypeOf(Object.prototype));
+// console.log(Object.getPrototypeOf(Object.prototype));
+
+// function Person(name) {
+//   this.name = name;
+// }
+
+// Person.prototype.sayName = function () {
+//   console.log(`Hello, I'm ${this.name}!`);
+// };
+
+// function Player(name, marker) {
+//   this.name = name;
+//   this.marker = marker;
+// }
+
+// Player.prototype.getMarker = function () {
+//   console.log(`My marker is "${this.marker}"`);
+// };
+
+// console.log(Object.getPrototypeOf(Player.prototype));
+
+// Object.setPrototypeOf(Player.prototype, Person.prototype);
+// console.log(Object.getPrototypeOf(Player.prototype));
+
+// const player1 = new Player("Burky", "X");
+// const player2 = new Player("Rachy", "O");
+
+// player1.sayName();
+// player2.sayName();
+
+// player1.getMarker();
+// player2.getMarker();
+
+// function Person(name) {
+//   this.name = name;
+// }
+
+// Person.prototype.sayName = function () {
+//   console.log(`Hello, I'm ${this.name}!`);
+// };
+
+// function Player(name, marker) {
+//   this.name = name;
+//   this.marker = marker;
+// }
+
+// // Player.prototype = Person.prototype;
+// Object.setPrototypeOf(Player.prototype, Person.prototype);
+
+// console.log(Object.getPrototypeOf(Player.prototype));
+
+// function Enemy(name) {
+//   this.name = name;
+//   this.marker = "^";
+// }
+
+// // Enemy.prototype = Person.prototype;
+// Object.setPrototypeOf(Enemy.prototype, Person.prototype);
+
+// console.log(Object.getPrototypeOf(Enemy.prototype));
+
+// Enemy.prototype.sayName = function () {
+//   console.log("HAHA");
+// };
+
+// const carl = new Player("carl", "X");
+// carl.sayName();
+
+let x = {};
+
+// log(Object.getPrototypeOf(x));
+
+// log(x.toString());
+
+let y = [];
+
+log(Object.getPrototypeOf(y));
+
+log(y.__proto__.__proto__);
+
+log(Object.getPrototypeOf(y) === Array.prototype);
+log(Object.getPrototypeOf(Object.getPrototypeOf(y)) === Object.prototype);
