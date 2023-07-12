@@ -240,17 +240,56 @@ const myObject = {
 // const carl = new Player("carl", "X");
 // carl.sayName();
 
-let x = {};
+// let x = {};
 
 // log(Object.getPrototypeOf(x));
 
 // log(x.toString());
 
-let y = [];
+// let y = [];
 
-log(Object.getPrototypeOf(y));
+// log(Object.getPrototypeOf(y));
 
-log(y.__proto__.__proto__);
+// log(y.__proto__.__proto__);
 
-log(Object.getPrototypeOf(y) === Array.prototype);
-log(Object.getPrototypeOf(Object.getPrototypeOf(y)) === Object.prototype);
+// log(Object.getPrototypeOf(y) === Array.prototype);
+// log(Object.getPrototypeOf(Object.getPrototypeOf(y)) === Object.prototype);
+
+// function Hero(name, level) {
+//   this.name = name;
+//   this.level = level;
+// }
+
+// function Warrior(name, level, weapon) {
+//   Hero.call(this, name, level);
+//   this.weapon = weapon;
+// }
+
+// function Healer(name, level, spell) {
+//   Hero.call(this, name, level);
+//   this.spell = spell;
+// }
+
+// Object.setPrototypeOf(Healer.prototype, Hero.prototype);
+// Object.setPrototypeOf(Warrior.prototype, Hero.prototype);
+
+// Hero.prototype.greet = function () {
+//   return `${this.name} says hello.`;
+// };
+
+// Warrior.prototype.attack = function () {
+//   return `${this.name} attacks with the ${this.weapon}.`;
+// };
+
+// Healer.prototype.heal = function () {
+//   return `${this.name} casts ${this.spell}.`;
+// };
+
+// const hero1 = new Warrior("Burky", 1, "axe");
+// const hero2 = new Healer("Rachy", 1, "cure");
+
+// log(hero1.attack());
+// log(hero2.heal());
+
+// log(hero1.greet());
+// log(hero2.greet());
