@@ -293,3 +293,162 @@ const myObject = {
 
 // log(hero1.greet());
 // log(hero2.greet());
+
+// let animal = {
+//   walk() {
+//     if (!this.isSleeping) {
+//       alert("I walk");
+//     }
+//     this.isWalking = false;
+//   },
+
+//   sleep() {
+//     this.isSleeping = true;
+//   },
+// };
+
+// let rabbit = {
+//   name: "White Rabbit",
+//   __proto__: animal,
+// };
+
+// rabbit.sleep();
+// rabbit.walk();
+
+// log(rabbit);
+
+// log(rabbit.isSleeping);
+// log(rabbit.isWalking);
+
+// animal.sleep();
+// log(animal.isSleeping);
+// log(animal);
+
+// let animal = {
+//   eats: true,
+// };
+
+// let rabbit = {
+//   jumps: true,
+//   __proto__: animal,
+// };
+
+// // log(Object.keys(rabbit));
+
+// // for (let prop in rabbit) log(prop);
+
+// // log(Object.prototype.__proto__);
+// // log(rabbit.__proto__.__proto__.__proto__);
+
+// for (let prop in rabbit) {
+//   let isOwn = rabbit.hasOwnProperty(prop);
+
+//   if (isOwn) {
+//     log(`Our: ${prop}`);
+//   } else {
+//     log(`Inherited: ${prop}`);
+//   }
+// }
+
+// let animal = {
+//   jumps: null
+// };
+// let rabbit = {
+//   __proto__: animal,
+//   jumps: true
+// };
+
+// alert( rabbit.jumps ); // ? (1)
+
+// delete rabbit.jumps;
+
+// alert( rabbit.jumps ); // ? (2)
+
+// delete animal.jumps;
+
+// alert( rabbit.jumps ); // ? (3)
+
+// let animal = {
+//   jumps: null,
+// };
+// let rabbit = {
+//   __proto__: animal,
+//   jumps: true,
+// };
+
+// alert(rabbit.jumps); // ? (1)
+
+// delete rabbit.jumps;
+
+// alert(rabbit.jumps); // ? (2)
+
+// delete animal.jumps;
+
+// alert(rabbit.jumps); // ? (3)
+
+// let head = {
+//   glasses: 1,
+// };
+
+// let table = {
+//   __proto__: head,
+//   pen: 3,
+// };
+
+// let bed = {
+//   __proto__: table,
+//   sheet: 1,
+//   pillow: 2,
+// };
+
+// let pockets = {
+//   __proto__: bed,
+//   money: 2000,
+// };
+
+// // Object.setPrototypeOf(table.prototype, head.prototype);
+
+// log(head.glasses);
+// log(table.glasses);
+// log(bed.glasses);
+// log(pockets.glasses);
+
+// let animal = {
+//   eat() {
+//     this.full = true;
+//   },
+// };
+
+// let rabbit = {
+//   __proto__: animal,
+// };
+
+// rabbit.eat();
+
+// log(rabbit.full);
+// log(rabbit);
+
+let hamster = {
+  stomach: [],
+
+  eat(food) {
+    this.stomach = [food];
+  },
+};
+
+let speedy = {
+  __proto__: hamster,
+  // stomach: [],
+};
+
+let lazy = {
+  __proto__: hamster,
+  // stomach: [],
+};
+
+// This one found the food
+speedy.eat("apple");
+log(speedy.stomach); // apple
+
+// This one also has it, why? fix please.
+log(lazy.stomach); // apple
