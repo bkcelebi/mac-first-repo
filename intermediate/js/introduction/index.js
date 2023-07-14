@@ -4,13 +4,13 @@ function log(x) {
   console.log(x);
 }
 
-const myObject = {
-  property: "Value",
-  otherProperty: 77,
-  "obnoxious property": function () {
-    return 5;
-  },
-};
+// const myObject = {
+//   property: "Value",
+//   otherProperty: 77,
+//   "obnoxious property": function () {
+//     return 5;
+//   },
+// };
 
 // console.log(myObject.property);
 // console.log(myObject["obnoxious property"]);
@@ -428,27 +428,42 @@ const myObject = {
 // log(rabbit.full);
 // log(rabbit);
 
-let hamster = {
-  stomach: [],
+// let hamster = {
+//   stomach: [],
 
-  eat(food) {
-    this.stomach = [food];
-  },
-};
+//   eat(food) {
+//     this.stomach = [food];
+//   },
+// };
 
-let speedy = {
-  __proto__: hamster,
-  // stomach: [],
-};
+// let speedy = {
+//   __proto__: hamster,
+//   // stomach: [],
+// };
 
-let lazy = {
-  __proto__: hamster,
-  // stomach: [],
-};
+// let lazy = {
+//   __proto__: hamster,
+//   // stomach: [],
+// };
 
 // This one found the food
-speedy.eat("apple");
-log(speedy.stomach); // apple
+// speedy.eat("apple");
+// log(speedy.stomach); // apple
 
-// This one also has it, why? fix please.
-log(lazy.stomach); // apple
+// // This one also has it, why? fix please.
+// log(lazy.stomach); // apple
+
+// function test() {
+//   this.testOne = "test1";
+// }
+
+// test();
+
+// log(window.testOne);
+// log(window === this);
+
+// function test() {
+//   log(this === undefined);
+// }
+
+// test();
