@@ -467,3 +467,103 @@ function log(x) {
 // }
 
 // test();
+
+// const calc = {
+//   numb: 0,
+//   increment() {
+//     log(this === calc);
+//     this.numb += 1;
+//     return this.numb;
+//   },
+// };
+
+// log(calc.increment());
+// log(calc.increment());
+
+// const myDog = Object.create({
+//   sayName() {
+//     log(this === myDog);
+//     return this.name;
+//   },
+// });
+
+// myDog.name = "Milo";
+
+// log(myDog.sayName());
+
+// function Pet(type, legs) {
+//   this.type = type;
+//   this.legs = legs;
+//   // this.logInfo = function () {
+//   //   log(this === myCat);
+//   //   log(this === window);
+//   //   log(`The ${this.type} has ${this.legs} legs`);
+//   // };
+
+//   this.logInfo = () => {
+//     log(this === myCat);
+//     log(`The ${this.type} has ${this.legs} legs`);
+//   };
+// }
+
+// const myCat = new Pet("Cat", 4);
+
+// // log(setTimeout(myCat.logInfo.bind(myCat), 1000));
+// log(setTimeout(myCat.logInfo, 1000));
+
+// // myCat.logInfo();
+
+// function Country(name, traveled) {
+//   this.name = name ? name : "United Kingdom";
+//   this.traveled = Boolean(traveled); // transform to a boolean
+// }
+
+// Country.prototype.travel = function () {
+//   this.traveled = true;
+// };
+
+// // Constructor invocation
+// const france = new Country("France", false);
+// // Constructor invocation
+// const unitedKingdom = new Country();
+// const turkey = new Country();
+
+// france.travel(); // Travel to France
+
+// log(turkey.name);
+// log(turkey.traveled);
+// log(turkey.traveled);
+
+// log(unitedKingdom.traveled);
+// log(france.traveled);
+
+// log(france);
+// france.travel(); // Travel to France
+// log(france.traveled);
+
+// log(unitedKingdom);
+// unitedKingdom.travel();
+// log(unitedKingdom.traveled);
+
+// log(turkey);
+// turkey.travel();
+// log(turkey.traveled);
+
+// function Vehicle(type, wheelsCount) {
+//   if (!(this instanceof Vehicle)) {
+//     throw Error("Error: Incorrect invocation");
+//   }
+
+//   this.type = type;
+//   this.wheelsCount = wheelsCount;
+//   return this;
+// }
+
+// // Constructor invocation
+// const car = new Vehicle("Car", 4);
+// log(car.type); // => 'Car'
+// log(car.wheelsCount); // => 4
+// log(car instanceof Vehicle); // => true
+
+// // Function invocation. Throws an error.
+// const brokenCar = Vehicle("Broken Car", 3);
