@@ -207,9 +207,26 @@
 
 // console.log(Date.now());
 
-const Formatter = (function () {
-  const log = (message) => console.log(`[${Date.now()}] Logger: ${message}`);
-  return { log };
-})();
+// const Formatter = (function () {
+//   const log = (message) => console.log(`[${Date.now()}] Logger: ${message}`);
+//   return { log };
+// })();
 
-Formatter.log("Hello");
+// Formatter.log("Hello");
+
+const myFactory = (name) => {
+  const getName = () => console.log(`Hello, ${name}`);
+  return { name, getName };
+};
+
+const inhMyFactory = (name) => {
+  // const { getName } = myFactory(name);
+  // return { getName, name };
+
+  const prototype = myFactory(name);
+  return Object.assign({}, prototype);
+};
+
+const burak = inhMyFactory("Burak");
+burak.getName();
+console.log(burak.name);
