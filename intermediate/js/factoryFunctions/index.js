@@ -107,30 +107,109 @@
 
 // console.log(dogYears);
 
-const FactoryFunction = (string) => {
-  const capitaliseString = () => string.toUpperCase();
-  const printString = () => console.log(`----${capitaliseString()}----`);
-  return { printString };
-};
+// const FactoryFunction = (string) => {
+//   const capitaliseString = () => string.toUpperCase();
+//   const printString = () => console.log(`----${capitaliseString()}----`);
+//   return { printString };
+// };
 
-const taco = FactoryFunction("taco");
+// const taco = FactoryFunction("taco");
 
-// printString();
-// capitaliseString();
-// taco.capitaliseString();
-taco.printString();
+// // printString();
+// // capitaliseString();
+// // taco.capitaliseString();
+// taco.printString();
 
-const counterCreator = () => {
-  let count = 0;
-  return () => {
-    console.log(count);
-    count++;
-  };
-};
+// const counterCreator = () => {
+//   let count = 0;
+//   return () => {
+//     console.log(count);
+//     count++;
+//   };
+// };
 
-// console.log(count);
+// // console.log(count);
 
-const counter = counterCreator();
+// const counter = counterCreator();
 
-counter();
-counter();
+// counter();
+// counter();
+
+// const Player = (name, level) => {
+//   let health = level * 2;
+//   const getLevel = () => level;
+//   const getName = () => name;
+//   const die = () => {
+//     console.log("Uh oh");
+//   };
+//   const damage = (x) => {
+//     health -= x;
+//     if (health <= 0) {
+//       die();
+//     }
+//   };
+//   const attack = (enemy) => {
+//     if (level < enemy.getLevel()) {
+//       damage(1);
+//       console.log(`${enemy.getName()} has damaged ${name}`);
+//     }
+//     if (level > enemy.getLevel()) {
+//       enemy.damage(1);
+//       console.log(`${name} has damaged ${enemy.getName()}`);
+//     }
+//   };
+//   return { attack, damage, getLevel, getName };
+// };
+
+// const burak = Player("Burak", 5);
+// const badGuy = Player("Badguy", 3);
+
+// burak.die();
+// burak.health -= 1000;
+
+// const Person = (name) => {
+//   const sayName = () => console.log(`My name is ${name}`);
+//   return { sayName };
+// };
+
+// const Nerd = (name) => {
+//   // const { sayName } = Person(name);
+//   //the above works in case you want specific functions to be inherited
+//   // if you want all of them the below is the best
+//   const prototype = Person(name);
+//   const doSomething = () => console.log("Nerd stuff");
+//   // return { sayName, doSomething };
+//   return Object.assign({}, prototype, { doSomething });
+// };
+
+// const burak = Nerd("Burak");
+// burak.sayName();
+// burak.doSomething();
+
+//The module pattern
+
+// const calculator = (() => {
+//   const add = (a, b) => a + b;
+//   const sub = (a, b) => a - b;
+//   const mul = (a, b) => a * b;
+//   const div = (a, b) => a / b;
+//   return {
+//     add,
+//     sub,
+//     mul,
+//     div,
+//   };
+// })();
+
+// console.log(calculator.add(3, 5)); // 8
+// console.log(calculator.sub(6, 2)); // 4
+// console.log(calculator.mul(14, 5534)); // 77476
+
+// console.log(Date.now());
+
+const Formatter = (function () {
+  const log = (message) => console.log(`[${Date.now()}] Logger: ${message}`);
+  return { log };
+})();
+
+Formatter.log("Hello");
