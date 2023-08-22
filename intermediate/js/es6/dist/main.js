@@ -1,0 +1,1 @@
+(()=>{"use strict";var e;document.body.appendChild((()=>{const e=document.createElement("div");return e.textContent="Hi! My name is Burak",e})()),e=prompt("Please enter a color"),document.querySelector("body").style.backgroundColor=e})();
